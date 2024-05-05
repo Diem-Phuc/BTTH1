@@ -1,0 +1,441 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  width: 100%;
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+ width: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 10%;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+ width: min(25rem, 90%);
+  border-radius: 5px;
+  height: auto;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+/* CSS */
+.portfolio__container {
+   width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .portfolio__container h2{
+    position: relative;
+    left: 15%;
+  }
+  
+  .portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 100px;
+    position: relative;
+    left: 30%;
+  }
+  
+  .portfolio__item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio__image {
+    width: 100%;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio__item:hover .portfolio__image {
+    transform: scale(1.1);
+  }
+  
+  .portfolio__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio__item:hover .portfolio__overlay {
+    transform: translateY(0);
+  }
+  
+  .portfolio__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio__description {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .portfolio__link {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .portfolio__link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .chitiet {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* căn giữa theo chiều ngang */
+    text-align: center; /* căn giữa nội dung theo chiều ngang */
+    padding-top: 5%;
+  }
+  
+  .chitiet1 {
+    text-align: center;
+    padding-top: 20px;
+    width: 80%;
+    line-height: 25px;
+  }
+  
+  .chitiet1 .chitiet2 {
+    text-align: center;
+  }
+  
+  .product-image img {
+    width: 60%;
+    height: 70%;
+  }
+  
+  .noidung {
+    padding-top: 50px;
+    border: 1px solid #fcfcfc;
+    width: 27cm;
+    margin: 0 auto; /* căn giữa theo chiều ngang */
+    text-align: justify;
+    line-height: 25px;
+  }
+  hr{
+    border: none;
+    height: 2px;
+    width: 80%;
+    background: linear-gradient(to right, transparent, #bb32f5, transparent);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 10%;
+  }
+  
+  /* CSS cho footer */
+
+  .contact__form {
+    flex: 1;
+  }
+  
+  .contact__form h2 {
+    margin-bottom: 20px;
+  }
+  .contact__form{
+    justify-content: space-around;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, #c96ef0, transparent);
+  border-radius: 10px;
+  }
+  form{
+    width: 700px;
+    align-items: center;
+    margin: 0 auto; /* Căn giữa form */
+  padding: 20px; 
+  }
+  .contact__form h2{
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  
+  .contact__form input,
+  .contact__form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact__form textarea {
+    height: 150px;
+  }
+  
+  .contact__form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact__form button:hover {
+    background-color: #0056b3;
+  }
+  footer {
+    background-color: #333; /* Màu nền */
+    color: #fff; /* Màu chữ */
+    padding: 50px 0; /* Khoảng cách giữa footer và nội dung */
+  }
+  
+  .footer__content {
+    display: flex;
+    justify-content: space-between; /* Các phần tử con sẽ căn cách nhau theo chiều ngang */
+    flex-wrap: wrap; /* Nếu không đủ không gian, các phần tử sẽ xuống dòng */
+    position: relative;
+    left: 15%;
+  }
+  
+  .footer__info,
+  .col {
+    flex-basis: calc(50% - 20px); /* Sử dụng khoảng 50% chiều rộng cho mỗi cột, trừ đi khoảng cách giữa các cột */
+    margin-bottom: 20px; /* Khoảng cách giữa các cột */
+  }
+  
+  .footer__info h2,
+  .col h4 {
+    font-size: 20px; /* Kích thước tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  }
+  
+  .footer__info p {
+    margin: 0; /* Loại bỏ khoảng cách của đoạn văn */
+  }
+  
+  .icon {
+    display: flex;
+  }
+  
+  .icon i {
+    font-size: 24px; /* Kích thước biểu tượng */
+    margin-right: 10px; /* Khoảng cách giữa các biểu tượng */
+    color: #fff; /* Màu biểu tượng */
+  }
+  
+  /* Màu biểu tượng khi rê chuột qua */
+  .icon i:hover {
+    color: darkgray;
+  }
+  
+  
+  

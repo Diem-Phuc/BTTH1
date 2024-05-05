@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Design Mastery | Responsive Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Diễm Phúc</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Về tôi</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact__form">Liên hệ</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">XIN CHÀO</p>
+          <h1 class="title">
+            Tôi là <span>Diễm Phúc<br /></span> Là một sinh viên năm ba chuyên ngành Thương mại điện tử
+          </h1>
+          <p class="description">
+            Xin chào! Tôi là sinh viên năm ba chuyên ngành thương mại điện tử. Mục tiêu của tôi là trở thành một chuyên gia trong lĩnh vực này và tạo ra ảnh hưởng tích cực. Tôi chọn ngành này vì niềm đam mê với công nghệ và khát khao khám phá thế giới kinh doanh hiện đại.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Về tôi</button>
+            <button class="portfolio"><a href="#portfolio"> Portfolio</a></button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="me.jpg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio__container">
+          <h2>Portfolio</h2>
+          <div class="portfolio__grid">
+            <div class="portfolio__item">
+              <img src="banner" alt="Project 1" class="portfolio__image">
+              <div class="portfolio__overlay">
+                <h3 class="portfolio__title">Dự án 1</h3>
+                <a href="#duan1" class="portfolio__link">Xem chi tiết</a>
+              </div>
+            </div>
+            <div class="portfolio__item">
+              <img src="web" alt="Project 2" class="portfolio__image">
+              <div class="portfolio__overlay">
+                <h3 class="portfolio__title">Dự án 2</h3>
+                <a href="#duan2" class="portfolio__link">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="chitiet">
+        <div id="duan1" class="chitiet1">
+            <div class="chitiet2">
+                <h2>Đồ án môn học 1</h2>
+                <p class="description">Lập trình web</p>
+            </div>
+            <div class="product-image">
+                <img src="banner" alt="Website">
+            </div>
+        </div>
+        <div class="noidung">
+            <p class="description">
+                Trang web của tôi là một nền tảng bán hàng trực tuyến chuyên về thức ăn và các sản phẩm chăm sóc cho chó và mèo, nhằm tạo điều kiện thuận lợi cho các chủ nuôi trong việc mua sắm các sản phẩm chất lượng và đa dạng. Tại đây, người dùng có thể tìm thấy thông tin chi tiết về từng sản phẩm, bao gồm thành phần, hướng dẫn sử dụng và đánh giá từ các khách hàng trước đó. Đồng thời, trang web cung cấp các tính năng tiện ích như giỏ hàng để quản lý và xem lại các mặt hàng đã chọn, cũng như quy trình thanh toán trực tuyến an toàn và thuận tiện. Mục tiêu của chúng tôi là mang lại trải nghiệm mua sắm trực tuyến tốt nhất cho cả chủ thú cưng và thú cưng của họ.
+            </p>
+        </div> 
+        <hr>
+        <div id="duan2" class="chitiet1">
+            <div class="chitiet2">
+                <h2>Đồ án môn học 2</h2>
+                <p class="description">Đồ họa ứng dụng</p>
+            </div>
+            <div class="product-image">
+                <img src="web" alt="Website">
+            </div>
+        </div>
+        <div class="noidung">
+            <p class="description">
+                Dự án của tôi là việc tạo ra một bộ banners quảng cáo cho trang web chuyên ngành thương mại điện tử của Đại học Công nghiệp thành phố Hồ Chí Minh. Mục tiêu chính của dự án là tạo ra những banner thu hút và chuyên nghiệp, giới thiệu một cách đầy đủ về các chương trình đào tạo, cơ sở vật chất hiện đại và các thành tựu nổi bật của trường. Bằng cách này, chúng tôi hy vọng rằng bộ banners này sẽ góp phần tăng cường sự nhận thức và thu hút sự quan tâm của các sinh viên và những người quan tâm đến ngành thương mại điện tử tại trường Đại học Công nghiệp thành phố Hồ Chí Minh.
+            </p>
+        </div> 
+    </div>
+    <div id="contact__form" class="contact__form">
+        <h2>Gửi tin nhắn cho tôi</h2>
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Họ và tên" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Tin nhắn của bạn" required></textarea>
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    <footer>
+        <div class="footer__content">
+          <div class="footer__info">
+            <h2>Liên hệ</h2>
+            <p>Email: example@example.com</p>
+            <p>Điện thoại: 123-456-7890</p>
+            <p>Địa chỉ: Số nhà, Đường, Quận, Thành phố</p>
+          </div>
+          <div class="col">
+            <h4>Mạng xã hội</h4>
+            <div class="icon">
+              <a href="https://www.facebook.com/phg.thuy03?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+              <a href="https://www.tiktok.com/@yuht003?_t=8lnZNBEaLTD&_r=1"><i class='bx bxl-tiktok'></i></a>
+              <a href="https://www.instagram.com/phg_thyz/"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        </div>
+        
+      </footer>
+   
+      
+    <script src="script.js"></script>
+
+  </body>
+</html>
